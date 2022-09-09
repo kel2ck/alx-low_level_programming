@@ -3,14 +3,13 @@
 /**
  * main - Entry Point
  *
- * Description: prints to the stderr, "and that piece of art
- * is useful\" - Dora Korpar, 2015-10-19" 
+ * Description: prints to the stderr 
  * Return: 1
  */
 int main(void)
 {
 	fprintf(
-	stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
+	stderr, "and that piece ofart is useful\" - Dora Korpar, 2015-10-19\n"
 	);
 	return (1);
 }

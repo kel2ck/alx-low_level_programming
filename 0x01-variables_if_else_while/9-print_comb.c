@@ -8,16 +8,18 @@ int main(void)
 {
 	int index;
 
-	for (index = 0; index <= 9; index++)
+	for (index = 48; index <= 57; index++)
 	{
 		putchar(index);
 
-		if (index == 9)
+		if (index == 57)
 		{
+			break;
+		}
 			putchar(',');
 			putchar(' ');
-		}
 	}
+
 	putchar('\n');
 	return (0);
 }

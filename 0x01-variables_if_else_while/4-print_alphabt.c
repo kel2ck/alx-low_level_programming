@@ -9,12 +9,18 @@
 
 int main(void)
 {
-	char index;
-
-	for (index = '0'; index <= '9'; index++)
+	char alphabet;
+	
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		putchar(index);
+		if (alphabet == 'q')
+			continue;
+		else if (alphabet == 'e')
+			continue;
+
+		putchar (alphabet);
 	}
-	putchar('\n');
+	putchar ('\n');
+
 	return (0);
 }

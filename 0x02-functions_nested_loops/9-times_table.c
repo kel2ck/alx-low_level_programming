@@ -5,25 +5,32 @@
  */
 void times_table(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-	for (i = 0; i < 10; i++)
+	for (i = 1; i <= 9; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j =0; j <=9; j++)
 		{
-			if (i == 0)
-				printf("0");
+			int prod = j * i;
 
-			if (j != 10)
+			if (j == 0)
 			{
-				if (i !=0)
-					printf("%d", (i * j));
-				if ((i * (j + 1)) < 10 && j != 9)
-					printf(", ");
-				if ((i * (j + 1)) >= 10 && j !=9)
-					printf(", ");
+				_putchar('0');
+			} else if (prod <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(prod + '0');
+			} else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(prod / 10 + '0');
+				_putchar(prod % 10 + '0');
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }

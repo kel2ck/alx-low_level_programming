@@ -1,26 +1,29 @@
 #include "main.h"
 /**
- * times_table - Function to return absolute values.
+ * times_table - times table function
  *Return: 0
  */
 void times_table(void)
 {
-	int digit1;
-	int digit2;
+	int i, j;
 
-	for (digit1 = 1; digit1 <= 9; digit2++)
+	for (i = 0; i < 10; i++)
 	{
-		_putchar('0');
-		for (digit2 = 1; digit2 <= 9; digit2++)
+		for (j = 0; j < 10; j++)
 		{
-			int result = digit1 * digit2;
+			if (i == 0)
+				printf("0");
 
-			_putchar(',');
-			_putchar(' ');
-			_putchar('0' + (result / 10));
-			_putchar('0' + (result % 10));
+			if (j != 10)
+			{
+				if (i !=0)
+					printf("%d", (i * j));
+				if ((i * (j + 1)) < 10 && j != 9)
+					printf(", ");
+				if ((i * (j + 1)) >= 10 && j !=9)
+					printf(", ");
+			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
-	_putchar('\n');
 }

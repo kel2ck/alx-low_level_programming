@@ -6,24 +6,25 @@
  */
 int main(void)
 {
-	int counter = 2;
-	long int a = 1;
-	long int b = a + 1;
-	long int c = a + b;
+	long int i, j, k, next;
 
-	printf("%1d, %1d, ", a, b);
-	while (counter < 50)
+	j = 1;
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
 	{
-		printf("%1d", c);
-		counter++;
-		a = b;
-		b = c;
-		c = a + b;
-		if (counter < 50)
+		if (j != 2036501107)
 		{
-			printf(", ");
+			printf("%ld, " j);
+		} else
+		{
+			printf("%ld\n", j);
 		}
+		next = j + k;
+		j = k;
+		k = next;
 	}
-	printf("\n");
+
 	return (0);
 }
+			

@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -6,25 +7,22 @@
  */
 int main(void)
 {
-	long int i, j, k, next;
+	int count;
+	int unsigned long i = 0, j = 1, sum;
 
-	j = 1;
-	k = 2;
-
-	for (i = 1; i <= 50; ++i)
+	for (count = 0; count < 50; count++)
 	{
-		if (j != 2036501107)
-		{
-			printf(("%ld ") j);
-		} else
-		{
-			printf("%ld \n", (long) j);
-		}
-		next = j + k;
-		j = k;
-		k = next;
+		sum = i + j;
+		printf("%ld", sum);
+
+		i = j;
+		j = sum;
+
+		if  (count == 49)
+			printf("\n");
+		else
+			printf(",");
 	}
 
 	return (0);
 }
-			

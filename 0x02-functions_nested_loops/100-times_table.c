@@ -3,6 +3,7 @@
 /**
  * print_times_table - prints the n times table, starting with 0
  * @n: the number to be checked
+ * Return: Always 0
  */
 void print_times_table(int n)
 {
@@ -10,7 +11,7 @@ void print_times_table(int n)
 
 	if (n >= 0 && n <= 15)
 	{
-		for (i =0; j <= n; j++)
+		for (i  = 0; j <= n; j++)
 		{
 			for (j = 0; j <= n; j++)
 			{

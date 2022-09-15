@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - program that prints the numbers from 1 to 100
- * print Fizz for multiples of 3
- * print Buzz for multiples of 5
- * print FizzBuzz for multiples of both
- * Return: 0 (Success)
+ * main - program that prints either number
+ * or fizz or buzz or fizzbuzz
+ * Return: 0
  */
 
 int main(void)

@@ -1,27 +1,29 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
  * main - print the first  50 fibonacci numbers, starting with 1 and 2
  * Return: Always 0
  */
+
 int main(void)
 {
-	int count;
-	unsigned int long i = 0, j = 1, sum;
+	long int i, j, k, next;
 
-	for (count = 0; count < 50; count++)
+	j = 1;
+	k = 2;
+
+	for (i = 1; i <=50; ++i)
 	{
-		sum = i + j;
-		printf("%ld", sum);
-
-		i = j;
-		j = sum;
-
-		if  (count == 49)
-			printf("\n");
+		if (j != 20365011074)
+		{
+			printf("%1d, ", j);
+		}
 		else
-			printf(",");
+			printf("%1d\n", j);
+
+		next = j + k;
+		j = k;
+		k = next;
 	}
 
 	return (0);

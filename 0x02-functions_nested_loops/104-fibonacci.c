@@ -3,46 +3,38 @@
  * main - Function to return absolute values
  * Return: Always 0
  */
+
 int main(void)
 {
-	int count;
-	unsigned long int fib1 = 0, fib2 = 1, sum;
-	unsigned long int fib1_half1, fib_half2, fib2_half1, fib2_half2;
-	unsigned long int half1, half2;
+	unsigned long int a, b, c, b1, b2, c1, c2;
 
-	for (count = 0; count < 92; count++)
+	b = 1;
+	c = 2;
+
+	printf("%lu", b);
+
+	for (a = 1; a < 91; a++)
 	{
-		sum = fib1 + fib2;
-		printf("%1u, ", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
+		printf(", %lu", c);
+		c = c + b;
+		b = c - b;
 	}
 
-	fib1_half1 = fib1 / 10000000000;
-	fib2_half1 = fib2 / 10000000000;
-	fib1_half2 = fib1 % 10000000000;
-	fib2_half2 = fib2 % 10000000000;
+	b1 = b / 1000000000;
+	b2 = b % 1000000000;
+	c1 = c / 1000000000;
+	c2 = c % 1000000000;
 
-	for (count = 93; count < 99; count++)
+	for (a = 92; a < 99; ++a)
 	{
-		half1 = fib1_half1 + fib2_half1;
-		half2 = fib1_half2 + fib2_half2;
-		if (fib1_half2 + fib2_half2 > 9999999999)
-		{
-			half1 += 1;
-			half2 %= 10000000000;
-		}
-
-		printf("%1u%1u", half1, half2);
-		if (count != 98)
-			printf(", ");
-
-		fib1_half1 = fib2_half1;
-		fib1_half2 = fib2_half2;
-		fib2_half1 = half1;
-		fib2_half1 = half2;
+		printf(", %lu", c1 + (c2 / 1000000000));
+		printf("%lu", c2 % 1000000000);
+		c1 = c1 + b1;
+		b1 = c1 - b1;
+		c2 = c2 + b2;
+		b2 = c2 - b2;
 	}
+
 	printf("\n");
 	return (0);
 }

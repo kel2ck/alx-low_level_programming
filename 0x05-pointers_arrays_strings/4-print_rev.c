@@ -2,7 +2,7 @@
 
 /**
  * print_rev - A function to return absolute value
- * @str: string value
+ * @s: String value
  * Return: void
  */
 

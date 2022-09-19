@@ -3,17 +3,17 @@
 /**
  * _puts - A function that prints a string
  * @str: string to be printed
- * Return: 0 (Success)
+ * Return: void
  */
 
 void _puts(char *str)
 {
-	int i = 0;
+	int i;
+	int length = strlen(str);
 
-	while (str[i] != '\0')
+	for (i = 0; i < length; i++)
 	{
 		_putchar(str[i]);
-		i++;
 	}
 	_putchar('\n');
 }

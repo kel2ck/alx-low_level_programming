@@ -7,17 +7,12 @@
  * @str: input string
  * Return: void
  */
-void puts2(char *i)
+void puts2(char *str)
 {
-	int len = strlen(i);
-	int j;
+	int i;
 
-	for (j = 0; j < len; j++)
+	for (i = strlen(str) - 1; i >= 0; i += 2)
 	{
-		if (j % 2 == 0)
-		{
-			printf("%c", i[j]);
-		}
+		_putchar(str[i]);
 	}
-	printf("\n");
 }

@@ -10,19 +10,19 @@
 
 char *leet(char *str)
 {
-	int k = 0;
+	int i = 0;
 	int n;
 	char leet[8] = {'0', 'l', '?', 'E', 'A', '?' '?', 'T'};
 
-	while (str[k])
+	while (str[i])
 	{
 		for (n = 0; n <= 7; n++)
 		{
-			if (str[k] == leet[n] ||
-					str[k] - 32 == leet[n])
-				str[k] = n + '0';
+			if (str[i] == leet[n] ||
+					str[i] - 32 == leet[n])
+				str[i] = n + '0';
 		}
-		k++;
+		i++;
 	}
 	return (str);
 }

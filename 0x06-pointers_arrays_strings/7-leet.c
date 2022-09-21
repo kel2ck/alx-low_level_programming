@@ -1,6 +1,4 @@
-#include "main.h"
-#include <stdio.h>
-#include <string.h>
+#include "main."
 
 /**
  * leet - A function that encodes a string into 1337.

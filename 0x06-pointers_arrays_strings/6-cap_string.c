@@ -9,17 +9,30 @@
  */
 char *cap_string(char *s)
 {
-	while (*s != '\0')
-	{
-		if (*s >= 65 && *s <= 90)
-		{
+	int len = strlen(s);
+	int i;
 
-		}
-		else if (*s >= 97 && *s <= 122)
+	for (i = 0; i < len; i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			*s = *s - 32;
+			if (i == 0)
+				s[i] = (char) (s[i] + ('A' - 'a'));
+			else if (s[i - 1] == ',' || s[i - 1] == ';')
+				s[i] = (char)(s[i] + ('A' - 'a'));
+			else if (s[i - 1] == '.' || s[i - 1] == '!')
+				s[i] = (char)(s[i] + ('A' - 'a'));
+			else if (s[i - 1] == '?' || s[i - 1] == '\"')
+				s[i] = (char)(s[i] + ('A' - 'a'));
+			else if (s[i - 1] == '(' || s[i - 1] == ')')
+				s[i] = (char)(s[i] + ('A' - 'a'));
+			else if (s[i - 1] == '{' || s[i - 1] == '}')
+				s[i] = (char)(s[i] + ('A' - 'a'));
+			else if (s[i - 1] == ' ' || s[i - 1] == '\t')
+				s[i] = (char)(s[i] + ('A' - 'a'));
+			else if (s[i - 1] == '\n')
+				s[i] = (char)(s[i] + ('A' - 'a'));
 		}
-		s++;
 	}
-	return (0);
+	return (s);
 }

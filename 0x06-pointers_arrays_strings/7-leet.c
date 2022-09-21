@@ -6,21 +6,23 @@
  * Return: Always 0
  */
 
-char *leet(char *str)
+char *leet(char *i)
 {
-	int i = 0;
-	int n;
-	char leet[8] = {'0', 'l', '?', 'E', 'A', '?' '?', 'T'};
+	int a = 0; b, l = 5;
+	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
+	char trw[5] = {'4', '3', '0', '7', 'l'}
 
-	while (str[i])
+	while (i[a])
 	{
-		for (n = 0; n <= 7; n++)
+		b = 0;
+
+		while (b < l)
 		{
-			if (str[i] == leet[n] ||
-					str[i] - 32 == leet[n])
-				str[i] = n + '0';
+			if (i[a] == tr[b] || i[a] - 32 == tr[b])
+				i[a] = trw[b];
+			b++;
 		}
-		i++;
+		a++;
 	}
-	return (str);
+	return (i);
 }

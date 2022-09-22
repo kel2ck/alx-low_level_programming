@@ -3,7 +3,7 @@
 
 /**
  * print_line - A function that prints a buffer
- * @c: buffer 
+ * @c: buffer
  * @s: buffer bytes
  * @l: line of buffer
  * Return: void

@@ -4,8 +4,9 @@
 /**
  * print_line - A function that prints a buffer
  * @c: buffer
- * @s: buffer bytes
- * @l: line of buffer
+ * @s: buffer bytes to print
+ * @l: line of buffer to print
+ *
  * Return: void
  */
 
@@ -24,7 +25,7 @@ void print_line(char *c, int s, int l)
 	}
 	for (k = 0; k <= s; k++)
 	{
-		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 12)
+		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
 			putchar(c[l * 10 + k]);
 		else
 			putchar('.');

@@ -1,9 +1,12 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
- * leet - A function that encodes a string into 1337.
- * @i: string to be encoded
- * Return: Always 0
+ * leet - A leet function that encodes a string
+ * @i: param i
+ * Return: a string
  */
 
 char *leet(char *i)
@@ -12,7 +15,7 @@ char *leet(char *i)
 	int b = 0;
 	int l = 5;
 	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
-	char trw[5] = {'4', '3', '0', '7', 'l'}
+	char trw[5] = {'4', '3', '0', '7', '1'};
 
 	while (i[a])
 	{

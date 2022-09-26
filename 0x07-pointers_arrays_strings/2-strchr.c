@@ -3,9 +3,9 @@
 
 /**
  * _strchr - A function that locates a character in a string.
- * @s: string to search for 
+ * @s: string to search for
  * @c: character to search for in the string in s
- * Return: c or Null if not found
+ * Return: occurence of c or Null if not found
  */
 
 char *_strchr(char *s, char c)

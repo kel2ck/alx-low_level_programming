@@ -3,28 +3,29 @@
 /**
  * _strstr - A function that locates a substring
  * @haystack: main string to be checked
- * @needle:  substring of haystack
+ * @needle:  substring to be checked
  * Return: 0
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *a;
-	char *b;
+	char *i;
+	char *j;
 
 	while (*haystack != '\0')
 	{
-		a = haystack;
-		b = needle;
+		i = haystack;
+		j = needle;
 
-		while (*haystack != '\0' && *b != '\0' && *haystack == *b)
+		while (*haystack != '\0' && *j != '\0' && *haystack == *j)
 		{
 			haystack++;
-			b++
+			j++;
+
 		}
-		if (b == '\0')
-			return (a);
-		haystack = a + l;
+		if (!*j)
+			return (i);
+		haystack = i + 1;
 	}
 	return (0);
 }

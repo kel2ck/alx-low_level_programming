@@ -3,7 +3,7 @@
 
 /**
  * set_string - A function that sets the value of a pointer to a char.
- * @s: variable to change 
+ * @s: variable to change
  * @to: variable to change s to
  * Return: void
  */

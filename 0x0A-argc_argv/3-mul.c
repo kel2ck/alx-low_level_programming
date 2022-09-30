@@ -6,19 +6,24 @@
  * main - A program that multiplies two numbers.
  * @argc: The number of arguments supplied
  * @argv: An array of pointers to the arguments
- * Return: 0 (Success)
+ * Return: 0 (Success) for two argument else error
  */
 
 int main(int argc, char *argv[])
 {
-	if (argc <= 2)
+	int result, a, b;
+
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (argc > 2)
-	{
-		printf("%i\n", atoi(argv[1] * atoi(argv[2]));
-	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+	result = a * b;
+
+	printf("%d\n", result);
+
 	return (0);
 }

@@ -13,7 +13,7 @@ char **strtow(char *str);
  * Return: index
  */
 
-int word_len(char *str);
+int word_len(char *str)
 {
 	int index = 0, len = 0;
 
@@ -31,7 +31,7 @@ int word_len(char *str);
  * @str: string to be searched
  * Return: the number of words contained in a string
  */
-int count_words(char *str);
+int count_words(char *str)
 {
 	int index = 0, words = 0, len = 0;
 

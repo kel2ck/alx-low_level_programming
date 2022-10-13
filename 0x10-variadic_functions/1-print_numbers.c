@@ -1,4 +1,4 @@
-#include "variadic_function.h"
+#include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -27,4 +27,3 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	putchar('\n');
 }
-

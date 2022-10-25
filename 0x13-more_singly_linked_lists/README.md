@@ -1,8 +1,6 @@
 0x13. C - More Singly Linked Lists
 
 
-
-
 0- Write a function that prints all the elements of a list.
 
 1- Write a function that returns the number of elements in a linked list.
@@ -31,4 +29,4 @@
 
 13- Write a function that frees a listint-t list.
 
-14- Write a function that finds the loop in a linked list
+14- Write a function that finds the loop in a linked list.
